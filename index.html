@@ -53,7 +53,10 @@
                     <!-- Nav Tabs -->
                     <ul class="nav nav-tabs" id="forecastTab">
                         <li class="nav-item">
-                            <a href="#hourly" class="nav-link active" data-toggle="tab">Hourly</a>
+                            <a href="#minutely" class="nav-link active" data-toggle="tab">Minutely</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#hourly" class="nav-link" data-toggle="tab">Hourly</a>
                         </li>
                         <li class="nav-item">
                             <a href="#weekly" class="nav-link" data-toggle="tab">Weekly</a>
@@ -62,6 +65,11 @@
 
                     <!-- Tab Panes -->
                     <div class="tab-content">
+                        <div class="tab-pane container active" id="minutely">
+                            <table id="dailyForecast" width=100%>
+
+                            </table>
+                        </div>
                         <div class="tab-pane container active" id="hourly">
                             <table id="dailyForecast" width=100%>
 
