@@ -43,3 +43,10 @@ span {
         margin-top: 70px;
     }
  }
+
+ /* Small Devices */
+@media (max-width: 576px) {
+    #forecast {
+        margin: 2em 0;
+    }
+}
