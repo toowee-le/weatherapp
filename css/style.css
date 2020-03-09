@@ -12,9 +12,6 @@ html {
     background-attachment: fixed;
     color: var(--main-text);
     font-family: 'Lato', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #main {
@@ -30,3 +27,9 @@ h2 {
 span {
     font-size: 2rem;
 }
+
+@media (min-width: 576px) { 
+    #main {
+        margin-top: 70px;
+    }
+ }
