@@ -38,6 +38,11 @@ span {
     color: var(--secondary-color);
 }
 
+#footer a {
+    color: var(--light-white);
+    font-size: .8rem;
+}
+
 @media (min-width: 576px) { 
     #main {
         margin-top: 70px;
