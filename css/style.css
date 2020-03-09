@@ -54,4 +54,8 @@ span {
     #forecast {
         margin: 2em 0;
     }
+
+    #footer {
+        margin-bottom: .8em;
+    }
 }
