@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 :root {
-    --main-text: #fff;
+    --main-color: #fff;
+    --secondary-color: #000;
+    --light-white: #f2f2f2;
 }
 
 body,
@@ -10,7 +12,7 @@ html {
     background: linear-gradient(rgb(119, 149, 199), rgb(236, 197, 190));
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: var(--main-text);
+    color: var(--main-color);
     font-family: 'Lato', sans-serif;
 }
 
@@ -26,6 +28,14 @@ h2 {
 
 span {
     font-size: 2rem;
+}
+
+#forecastTab li a {
+    color: var(--light-white);
+}
+
+#forecastTab li a.active {
+    color: var(--secondary-color);
 }
 
 @media (min-width: 576px) { 
