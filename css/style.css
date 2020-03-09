@@ -51,6 +51,10 @@ span {
 
  /* Small Devices */
 @media (max-width: 576px) {
+    #main {
+        border: 0;
+    }
+    
     #forecast {
         margin: 2em 0;
     }
