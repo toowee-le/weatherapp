@@ -46,6 +46,7 @@ span {
 @media (min-width: 576px) { 
     #main {
         margin-top: 70px;
+        max-width: 70%;
     }
  }
 
