@@ -2,6 +2,10 @@ window.addEventListener('load', () => {
     let longitude;
     let latitude;
 
+    let currentTemp = document.getElementById('degree');
+    let description = document.getElementById('description');
+    let currentLocation = document.getElementById('location');
+
     // Get the latitude and longitude of the user's location
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -18,6 +22,11 @@ window.addEventListener('load', () => {
             })
             .then(data => {
                 console.log(data);
+                // Set DOM elements to API data
+                const { temperature, summary, } = data.currently;
+                currentTemp.textContent = Math.floor(temperature);
+                description.textContent = summary;
+                currentLocation.textContent = data.timezone;
             })
         });
     } else {
