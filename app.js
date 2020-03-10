@@ -19,6 +19,8 @@ window.addEventListener('load', () => {
             })
             .then(data => {
                 console.log(data);
+
+                // JSON data
                 const { temperature, summary, icon, humidity, windSpeed, precipProbability, pressure } = data.currently;
 
                 // Set DOM elements to JSON/API data
