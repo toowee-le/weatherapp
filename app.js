@@ -2,6 +2,10 @@ window.addEventListener('load', () => {
     let longitude;
     let latitude;
 
+    const degree = document.getElementById('currentTempSection');
+    const currentTemp = document.getElementById('degree');
+    const degreeScale = document.querySelector('span');
+
     // Get the latitude and longitude of the user's location
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -30,9 +34,23 @@ window.addEventListener('load', () => {
                 document.getElementById('humidity').textContent = `Humidity: ${Math.floor(humidity*100)}%`;
                 document.getElementById('wind').textContent = `Wind: ${windSpeed} mph`;
                 document.getElementById('precipitation').textContent = `Precipitation: ${precipProbability}%`;
-                document.getElementById('pressure').textContent = `Pressure: ${pressure} mb`;                
+                document.getElementById('pressure').textContent = `Pressure: ${pressure} mb`;    
+                
+                // Formula for converting Fahrenheit to Celsius
+                let celsius = (temperature - 32) * (5 / 9);
+
+                // Change temperature to Celsius/Fahrenheit
+                degree.addEventListener('click', () => {
+                    if (degreeScale.textContent === "F") {
+                        degreeScale.textContent = "C";
+                        currentTemp.textContent = Math.floor(celsius);
+                    } else {
+                        degreeScale.textContent = "F";
+                        currentTemp.textContent = Math.floor(temperature);
+                    }
+                });
             })
-        });
+        })
     } else {
         alert("Geolocation is not supported by this browser.");
     };

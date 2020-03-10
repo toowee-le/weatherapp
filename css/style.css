@@ -22,6 +22,10 @@ html {
     border: 1px solid #fff;
 }
 
+#currentTempSection {
+    cursor: pointer;
+}
+
 h2 {
     font-size: 10rem;
 }
