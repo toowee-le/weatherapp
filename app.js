@@ -39,7 +39,7 @@ window.addEventListener('load', () => {
                 // Formula for converting Fahrenheit to Celsius
                 let celsius = (temperature - 32) * (5 / 9);
 
-                // Change temperature to Celsius/Fahrenheit
+                // Change temperature to Celsius/Fahrenheit on click
                 degree.addEventListener('click', () => {
                     if (degreeScale.textContent === "F") {
                         degreeScale.textContent = "C";
