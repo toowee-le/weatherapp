@@ -1,10 +1,12 @@
+const degree = document.getElementById('currentTempSection');
+const currentTemp = document.getElementById('degree');
+const degreeScale = document.querySelector('span');
+const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
 window.addEventListener('load', () => {
     let longitude;
     let latitude;
-
-    const degree = document.getElementById('currentTempSection');
-    const currentTemp = document.getElementById('degree');
-    const degreeScale = document.querySelector('span');
 
     // Get the latitude and longitude of the user's location
     if (navigator.geolocation) {
