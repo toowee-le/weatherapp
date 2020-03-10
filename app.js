@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
                 const { time, temperature, summary, icon, humidity, windSpeed, precipProbability, pressure } = data.currently;
 
                 let timeStamp = new Date(data.currently.time * 1000);
-                let forecastDate = `${day[timeStamp.getDay()]} ${timeStamp.getDate()} ${month[timeStamp.getMonth()]} ${timeStamp.getFullYear()}`;
+                let forecastDate = `${day[timeStamp.getDay()]} ${timeStamp.getDate()} ${month[timeStamp.getMonth()]}, ${timeStamp.getFullYear()}`;
 
                 // Set DOM elements to JSON/API data
                 document.getElementById('date').textContent = forecastDate;
