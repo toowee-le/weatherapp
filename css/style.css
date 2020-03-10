@@ -34,6 +34,10 @@ span {
     font-size: 2rem;
 }
 
+#description {
+    letter-spacing: 2px;
+}
+
 #forecastTab li a {
     color: var(--light-white);
 }
