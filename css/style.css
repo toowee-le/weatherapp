@@ -50,14 +50,20 @@ span {
     }
  }
 
- /* Small Devices */
-@media (max-width: 576px) {
-    #main {
-        border: 0;
+@media (max-width: 875px) {
+    h2 {
+        font-size: 8em;
     }
     
     #forecast {
         margin: 2em 0;
+    }
+}
+
+ /* Small Devices */
+@media (max-width: 576px) {
+    #main {
+        border: 0;
     }
 
     #footer {
