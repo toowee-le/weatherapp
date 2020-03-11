@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
                 console.log(data);
 
                 // JSON data
-                const { time, temperature, summary, icon, humidity, windSpeed, precipProbability, pressure } = data.currently;
+                const { temperature, summary, icon, humidity, windSpeed, precipProbability, pressure } = data.currently;
 
                 let timeStamp = new Date(data.currently.time * 1000);
                 let forecastDate = `${day[timeStamp.getDay()]} ${timeStamp.getDate()} ${month[timeStamp.getMonth()]}, ${timeStamp.getFullYear()}`;
@@ -40,7 +40,10 @@ window.addEventListener('load', () => {
                 document.getElementById('humidity').textContent = `Humidity: ${Math.floor(humidity*100)}%`;
                 document.getElementById('wind').textContent = `Wind: ${windSpeed} mph`;
                 document.getElementById('precipitation').textContent = `Precipitation: ${precipProbability}%`;
-                document.getElementById('pressure').textContent = `Pressure: ${pressure} mb`;    
+                document.getElementById('pressure').textContent = `Pressure: ${pressure} mb`;
+
+                // Set and display the weather icon
+                setIcon(icon, document.querySelector('.icon'));
                 
                 // Formula for converting Fahrenheit to Celsius
                 let celsius = (temperature - 32) * (5 / 9);
@@ -55,9 +58,21 @@ window.addEventListener('load', () => {
                         currentTemp.textContent = Math.floor(temperature);
                     }
                 });
+
+                // Render the forecast tabs
             })
-        })
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    };
+            .catch(err => {
+                throw (`Sorry, an error occured. ${err}`);
+            })
+        });
+    } 
+
+    function setIcon(icon, iconID) {
+        const skycons = new Skycons({color: "white"});
+        const currentIcon = icon.replace(/-/g, "_").toUpperCase();
+        // Animate the icon
+        skycons.play();
+        // Change the icon
+        return skycons.set(iconID, Skycons[currentIcon]);
+    }
 });
