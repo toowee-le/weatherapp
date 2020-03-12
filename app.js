@@ -63,7 +63,7 @@ window.addEventListener('load', () => {
                 });
 
                 // Render the forecast tabs
-                // document.getElementById('dailyForecast').innerHTML = renderDailyForecast(data.hourly);
+                // document.getElementById('hourlyForecast').innerHTML = renderHourlyForecast(data.hourly);
                 document.getElementById('weeklyForecast').innerHTML = renderWeeklyForecast(data.daily);
             })
             .catch(err => {
@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
     }
     
     // // Render the daily forecast
-    // function renderDailyForecast(forecastData) {
+    // function renderHourlyForecast(forecastData) {
     //     let resultsTable = `
     //         <tr>
     //             <th>Time</th>
@@ -83,33 +83,35 @@ window.addEventListener('load', () => {
     //         </tr>`;
 
     //     // Get weather data for the next 8 hours
-    //     rowCount = forecastData.data.length;
-    //     if (rowCount > 8) {
-    //         rowCount = 8;
+    //     rowcount = forecastData.data.length;
+    //     if (rowcount > 8) {
+    //         rowcount = 8;
     //     }
 
     //     // Loop over the data and add to a new row
-    //     for (let i = 0; i < rowCount; i++) {
+    //     for (let i = 0; i < rowcount; i++) {
 
-    //     // Convert UNIX time to a Date object formatted for display
-    //     let timeStamp = new Date(forecastData.data[i].time * 1000);
-    //     let timeValue = 0;
+    //         // Convert UNIX time to a Date object formatted for display
+    //         let timeStamp = new Date(forecastData.data[i].time * 1000);
+    //         let summary = "";
+    //         let tempHigh = 0;
+    //         let timeValue = 0;
 
-    //     
-    //     let hours = timeStamp.getHours();
-    //     if (hours > 0 && hours <= 12) {
-    //         timeValue = "" + hours;
-    //     } else if (hours > 12) {
-    //         timeValue = "" (hours - 12);
-    //     } else if (hours == 0) {
-    //         timeValue = "12";
-    //     }
-    //     timeValue += (hours >= 12) ? " PM" : " AM";
+        
+    //         let hours = timeStamp.getHours();
+    //         if (hours > 0 && hours <= 12) {
+    //             timeValue = "" + hours;
+    //         } else if (hours > 12) {
+    //             timeValue = "" (hours - 12);
+    //         } else if (hours == 0) {
+    //             timeValue = "12";
+    //         }
+    //         timeValue += (hours >= 12) ? " PM" : " AM";
 
-    //     let summary = forecastData.data[i].summary;
-    //     let tempHigh = `${Math.round(forecastData.data[i].temperature)}&deg`;
-    //     let precipProbability = `${Math.round(forecastData.data[i].precipProbability * 100)}%`;
-    //     resultsTable += renderRow(timeValue, summary, tempHigh, precipProbability);
+    //         summary = forecastData.data[i].summary;
+    //         tempHigh = `${Math.round(forecastData.data[i].temperature)}&deg`;
+    //         let precipProbability = `${Math.round(forecastData.data[i].precipProbability * 100)}%`;
+    //         resultsTable += renderRow(timeValue, summary, tempHigh, precipProbability);
 
     //     }
 
