@@ -56,6 +56,10 @@ span {
 Weather forecast
 ------------*/
 
+#forecastTab {
+    padding-top: 1em;
+}
+
 #forecastTab li a {
     color: var(--main-color);
 }
