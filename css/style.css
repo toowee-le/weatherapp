@@ -57,11 +57,12 @@ Weather forecast
 ------------*/
 
 #forecastTab li a {
-    color: var(--light-white);
+    color: var(--main-color);
 }
 
-#forecastTab li a.active {
-    color: var(--secondary-color);
+#forecastTab li a:hover {
+    background: none;
+    border-color: transparent;
 }
 
 /*------------
