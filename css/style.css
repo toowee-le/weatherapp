@@ -106,11 +106,7 @@ Media queries
 }
 
  /* Small Devices */
-@media (max-width: 576px) {
-    .container {
-        margin-bottom: 1em;
-    }
-    
+@media (max-width: 576px) {    
     #main {
         border: 0;
     }
