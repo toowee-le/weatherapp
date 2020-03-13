@@ -69,6 +69,10 @@ Weather forecast
 Footer
 ------------*/
 
+#footer {
+    margin-bottom: 2em;
+}
+
 #footer a {
     color: var(--light-white);
     font-size: .8rem;
@@ -103,9 +107,5 @@ Media queries
     
     #main {
         border: 0;
-    }
-
-    .container #footer {
-        margin-bottom: .8em;
     }
 }
