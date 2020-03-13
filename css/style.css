@@ -97,6 +97,10 @@ Media queries
 
  /* Small Devices */
 @media (max-width: 576px) {
+    .container {
+        margin-bottom: 1em;
+    }
+    
     #main {
         border: 0;
     }
