@@ -26,10 +26,6 @@ html {
 Typography
 ------------*/
 
-#currentTempSection {
-    cursor: pointer;
-}
-
 #location {
     font-size: 3.2rem;
 }
