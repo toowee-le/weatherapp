@@ -34,7 +34,11 @@ Typography
     font-size: 10rem;
 }
 
-span,
+span {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
 #slash {
     font-size: 2rem;
 }
