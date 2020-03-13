@@ -38,7 +38,8 @@ Typography
     font-size: 10rem;
 }
 
-span {
+span,
+#slash {
     font-size: 2rem;
 }
 

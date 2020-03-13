@@ -2,6 +2,8 @@
 const degree = document.getElementById('currentTempSection');
 const currentTemp = document.getElementById('degree');
 const degreeScale = document.querySelector('span');
+const cTemp = document.getElementById('celsius');
+const fTemp = document.getElementById('fahrenheit');
 
 const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -51,16 +53,14 @@ window.addEventListener('load', () => {
                 // Formula for converting Fahrenheit to Celsius
                 let celsius = (temperature - 32) * (5 / 9);
 
-                // Change temperature to Celsius/Fahrenheit on click
-                degree.addEventListener('click', () => {
-                    if (degreeScale.textContent === "F") {
-                        degreeScale.textContent = "C";
-                        currentTemp.textContent = Math.floor(celsius);
-                    } else {
-                        degreeScale.textContent = "F";
-                        currentTemp.textContent = Math.floor(temperature);
-                    }
-                });
+                // Event listeners to change temperature to Celsius/Fahrenheit on click
+                cTemp.addEventListener('click', () => {
+                    currentTemp.textContent = Math.floor(celsius);
+                })
+
+                fTemp.addEventListener('click', () => {
+                    currentTemp.textContent = Math.floor(temperature);
+                })
 
                 // Render the forecast tabs
                 // document.getElementById('hourlyForecast').innerHTML = renderHourlyForecast(data.hourly);
