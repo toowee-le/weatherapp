@@ -39,7 +39,7 @@ span,
     font-size: 2rem;
     color: var(--secondary-color);
     cursor: pointer;
-    padding-right: 2px;
+    padding-right: 3px;
 }
 
 span:hover {
